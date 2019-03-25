@@ -1,0 +1,40 @@
+atlas account details
+
+user name : pogularakesh209@gmail.com
+
+password : raki@123
+
+mongo queries: 
+
+-->show dbs means it will show databases in our account
+
+--> use <database name>  ex: use raki  it will create database in the name of raki
+
+-->for create collection:
+   
+   db.createCollection("<collection name>")
+ex:     
+   db.createCollection("mycollection")
+
+-->for drop collection
+
+db.mycollection.drop()
+
+
+-->for insert data:
+
+  >db.<collection name>.insert({'name':'data'})
+ex:
+  >db.taxentry.insert({rate:500331,restriction based:'Ril',restriction of GTI:'yes',rate description:'50%',application from:'Tue oct 01 2019 00:00:00 GMT+0530(india standard time)',application to:'wed oct 02 2019 00:00:00 GMT+0530 (india standard time)'})
+
+--> to retrieve data:
+
+   db.taxentry.find()
+
+-->to delete data
+
+   db.taxentry.remove({'rate':'500331'})
+
+-->to update data
+
+  db.taxentry.update({'rate':'500331'},{$set:{'rate':'500332'}})
